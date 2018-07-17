@@ -8,6 +8,14 @@ require_relative './exercise_6'
 
 puts "Exercise 7"
 puts "----------"
+puts "Enter name of new store?"
+@my_store = gets.chomp()
+
+@new_store = Store.create(name: "#{@my_store}")
+
+for message in @new_store.errors.messages do
+  puts "#{message}"
+end
 
 # Your code goes here ...
 # Exercise 7: Validations for both models
